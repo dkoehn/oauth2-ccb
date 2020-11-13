@@ -46,7 +46,7 @@ class CCBClient extends AbstractProvider
         if ($this->_client === null) {
             $this->_client = new Client(
                 [
-                    'base_uri' => 'https://api.ccbchurch.com',
+                    'base_uri' => $this->apiDomain,
                     'headers' => ['Content-Type' => 'application/json'],
                 ]
             );
@@ -146,7 +146,7 @@ class CCBClient extends AbstractProvider
      */
     public function getBaseAuthorizationUrl()
     {
-        return "https://{$this->oauthAppDomain}/oauth/authorize";
+        return $this->oauthAppDomain . '/oauth/authorize';
     }
 
     /**
@@ -158,7 +158,7 @@ class CCBClient extends AbstractProvider
      */
     public function getBaseAccessTokenUrl(array $params)
     {
-        return "https://{$this->apiDomain}/oauth/token";
+        return $this->apiDomain . '/oauth/token';
     }
 
     /**
@@ -170,7 +170,7 @@ class CCBClient extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return "https://{$this->apiDomain}/me";
+        return $this->apiDomain . '/me';
     }
 
     /**
