@@ -1,0 +1,22 @@
+{
+    "name": "dkoehn/oauth2-ccb",
+    "description": "Church Community Builder OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+    "license": "MIT",
+    "keywords": [
+        "oauth",
+        "oauth2",
+        "client",
+        "authorization",
+        "authorisation",
+        "ccb"
+    ],
+    "require": {
+        "league/oauth2-client": "^2.6",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dkoehn\\CCB\\OAuth2\\Client\\": "src/"
+        }
+    }
+}
